@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0 0 0 0;
+    box-sizing: border-box;
+}
+
+#third {
+    width: 40%;
+    overflow: hidden; 
+    margin:5%  0;
+}
+
+div#third div.row {
+    width: revert;
+    /* border: 1px solid violet; */
+}
+
+#row1 {
+    width: 100%;
+    height: 100%;
+}
+
+#row1 .half-border {
+    border-right: 2px solid black;
+}
+
+.hr {
+    border-top: 2px solid black;
+    margin: 21px -15px 20px;
+}
+
+/* .first_col {
+    background-color: yellowgreen;
+    border: 1px solid springgreen;
+} */
+
+.hrv {
+    /* transform: rotate(90deg);
+    border-top: 2px solid black;
+    margin: 30px -15px 20px; */
+    border-right: 2px solid black;
+}
+
+.third_content {
+    border:1px solid black;
+}

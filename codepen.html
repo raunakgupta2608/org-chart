@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='codepen.css'>
+        <!-- Bootstrap CSS -->
+        <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      />
+</head>
+<body onload="load()">
+    <div class="container">
+        <h1 class="level-1 rectangle">CEO</h1>
+        <ol class="level-2-wrapper">
+          <li>
+            <h2 class="level-2 rectangle">A</h2>
+            <ol class="level-3-wrapper">
+              <li>
+                <h3 class="level-3 rectangle">A</h3>
+              </li>
+              <li>
+                <h3 class="level-3 rectangle">B</h3>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <h2 class="level-2 rectangle">B</h2>
+            <ol class="level-3-wrapper">
+              <li>
+                <h3 class="level-3 rectangle">C</h3>
+              </li>
+              <li>
+                <h3 class="level-3 rectangle">D</h3>
+              </li>
+            </ol>
+          </li>
+        </ol>
+    </div>
+    <script>
+        function load() {
+            var x = document.getElementsByTagName('h3');
+            var y = document.getElementsByTagName('h2');
+            var z = document.getElementsByTagName('h1');
+
+            for(let k=0; k<x.length; k++) {
+                x[k].style.transform = "rotate(90deg)";
+            }   
+            for(let j=0; j<y.length; j++) {
+                y[j].style.transform = "rotate(90deg)";
+            }   
+            for(let i in z) {
+                z[i].style.transform = "rotate(90deg)";
+            }
+        }
+    </script>    
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>

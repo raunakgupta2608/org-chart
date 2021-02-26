@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Image Gallery Third Level View About MCA Multiple Slick</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Other CSS-->
+    <link rel="stylesheet" href="org.css" />
+    <!-- Poppins font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body onload="load()">
+
+    <div class="container third" id="third">
+        <div class="row">
+            <!-- nested structure used in first and all row -->
+            <div class="col-1 first_col">
+                <div class="row" id="row1">
+                    <div class="col-12"></div>
+                    <div class="col-12 half-border"></div>
+                </div>
+            </div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <!-- nested structure used in first and all row -->
+            <div class="col-1 first_col">
+                <div class="row" id="row1">
+                    <div class="col-12 half-border"></div>
+                    <div class="col-12"></div>
+                </div>
+            </div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+    </div>
+
+    <script>
+        function load() {
+            var x = document.getElementById("third");
+            var childNodes = x.childNodes;
+            
+            noofchild = Math.ceil((childNodes.length)/2);
+            var outerColChildDiv = childNodes[noofchild].childNodes;
+            outerColChildDiv[1].style.borderTop = "2px solid black";
+            console.log(outerColChildDiv);
+
+        }
+    </script>
+
+
+
+    <!-- jQuery first, then BxSlider, then JS, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="third-level-view-mul.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
