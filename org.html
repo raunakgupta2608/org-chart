@@ -52,71 +52,6 @@
             <div class="col-10 third_content">column</div>
         </div>
         <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
             <!-- nested structure used in first and all row -->
             <div class="col-1 first_col">
                 <div class="row" id="row1">
@@ -131,13 +66,19 @@
 
     <script>
         function load() {
+            var outerColChildDiv
             var x = document.getElementById("third");
             var childNodes = x.childNodes;
-            
+
             noofchild = Math.ceil((childNodes.length)/2);
-            var outerColChildDiv = childNodes[noofchild].childNodes;
+            console.log(childNodes);
+            console.log(noofchild);
+            if(noofchild / 2 == 0)
+                outerColChildDiv = childNodes[noofchild].childNodes;
+            else
+                outerColChildDiv = childNodes[noofchild+1].childNodes;
+                
             outerColChildDiv[1].style.borderTop = "2px solid black";
-            console.log(outerColChildDiv);
 
         }
     </script>
