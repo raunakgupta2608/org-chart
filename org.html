@@ -24,6 +24,7 @@
   </head>
   <body onload="load()">
 
+
     <div class="container third" id="third">
         <div class="row">
             <!-- nested structure used in first and all row -->
@@ -64,23 +65,89 @@
         </div>
     </div>
 
+    <!-- <div class="container third" id="third">
+        <div class="row">
+            <div class="col-1 first_col">
+                <div class="row" id="row1">
+                    <div class="col-12"></div>
+                    <div class="col-12 half-border"></div>
+                </div>
+            </div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">nested structure used in first and all row</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 hrv first_col"></div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">column</div>
+        </div>
+        <div class="row">
+            <div class="col-1 first_col">
+                <div class="row" id="row1">
+                    <div class="col-12 half-border"></div>
+                    <div class="col-12"></div>
+                </div>
+            </div>
+            <div class="col-1"><hr class="hr"></div>
+            <div class="col-10 third_content">nested structure used in first and all row</div>
+        </div>
+    </div> -->
+
     <script>
         function load() {
             var outerColChildDiv
             var x = document.getElementById("third");
             var childNodes = x.childNodes;
+            
 
-            noofchild = Math.ceil((childNodes.length)/2);
-            console.log(childNodes);
-            console.log(noofchild);
-            if(noofchild / 2 == 0)
+            noofchild = Math.floor((childNodes.length)/2);
+            var outerColChildDiv = childNodes[noofchild].childNodes;
+            // console.log(outerColChildDiv);
+
+            if(childNodes[noofchild+1].nodeName == "#text"){
                 outerColChildDiv = childNodes[noofchild].childNodes;
-            else
+                outerColChildDiv[1].style.borderBottom = "2px solid black";
+            }
+            else{
                 outerColChildDiv = childNodes[noofchild+1].childNodes;
-                
-            outerColChildDiv[1].style.borderTop = "2px solid black";
+                outerColChildDiv[1].style.borderTop = "2px solid black";
+            }
+
+            // console.log(outerColChildDiv);
 
         }
+        // function load() {
+        //     var outerColChildDiv;
+        //     var i=0;
+        //     var q = [] = new Array();
+        //     var x = document.getElementById("third");
+        //     x.childNodes.forEach((x, index) => {
+        //         if(index%2 !== 0) {
+        //             q[i] = x;
+        //             i++
+        //         }
+        //     });
+            
+        //     noofchild = Math.floor((q.length)/2);
+        //     if(noofchild / 2 == 0)
+        //         outerColChildDiv = q[noofchild].childNodes;
+        //     else
+        //         outerColChildDiv = q[noofchild+1].childNodes;
+
+        //     outerColChildDiv.forEach(x => console.log(x));
+        //     outerColChildDiv[3].style.borderTop = "2px solid black";
+
+        // }
     </script>
 
 
