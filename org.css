@@ -4,6 +4,27 @@
     box-sizing: border-box;
 }
 
+
+#first {
+    margin: 25% 0 0 0;
+}
+
+div#first div.third_content {
+    margin: 50% 0 0 15%;
+}
+
+#second {
+    width: 100%;
+    overflow: hidden; 
+    margin:5%  0;
+}
+
+div#second div.row {
+    width: revert;
+    padding: 7%;
+    /* border: 1px solid violet; */
+}
+
 #third {
     width: 40%;
     overflow: hidden; 

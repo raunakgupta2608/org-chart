@@ -25,47 +25,83 @@
   <body onload="load()">
 
 
-    <div class="container third" id="third">
+    <div class="container-fluid">
         <div class="row">
-            <!-- nested structure used in first and all row -->
-            <div class="col-1 first_col">
-                <div class="row" id="row1">
-                    <div class="col-12"></div>
-                    <div class="col-12 half-border"></div>
+            <div class="col-4 p-0">
+                <div class="container first" id="first">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
                 </div>
             </div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <div class="col-1 hrv first_col"></div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
-        </div>
-        <div class="row">
-            <!-- nested structure used in first and all row -->
-            <div class="col-1 first_col">
-                <div class="row" id="row1">
-                    <div class="col-12 half-border"></div>
-                    <div class="col-12"></div>
+            <div class="col-4">
+                <div class="container-fluid bg-primary second" id="second">
+                    <div class="row bg-warning p-0 m-0">
+                        <div class="col-1"><hr class="hr"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"><hr class="hr"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"><hr class="hr"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"><hr class="hr"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"><hr class="hr"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
                 </div>
+                    <!-- <div class="row">
+                        <div class="col-1 first_col">
+                            <div class="row" id="row1">
+                                <div class="col-12"></div>
+                                <div class="col-12 half-border"></div>
+                            </div>
+                        </div>
+                        <div class="col-1"><hr class="hr"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1 hrv first_col"></div>
+                        <div class="col-1"><hr class="hr"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1 hrv first_col"></div>
+                        <div class="col-1"><hr class="hr"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1 hrv first_col"></div>
+                        <div class="col-1"><hr class="hr"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1 first_col">
+                            <div class="row" id="row1">
+                                <div class="col-12 half-border"></div>
+                                <div class="col-12"></div>
+                            </div>
+                        </div>
+                        <div class="col-1"><hr class="hr"></div>
+                        <div class="col-10 third_content">column</div>
+                    </div>
+                </div> -->
             </div>
-            <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">column</div>
+            <div class="col-4">
+                
+            </div>
         </div>
     </div>
 
-    <!-- <div class="container third" id="third">
+    <div class="container third bg-dark" id="third">
         <div class="row">
             <div class="col-1 first_col">
                 <div class="row" id="row1">
@@ -74,7 +110,7 @@
                 </div>
             </div>
             <div class="col-1"><hr class="hr"></div>
-            <div class="col-10 third_content">nested structure used in first and all row</div>
+            <div class="col-5 third_content">nested structure used in first and all row</div>
         </div>
         <div class="row">
             <div class="col-1 hrv first_col"></div>
@@ -101,10 +137,13 @@
             <div class="col-1"><hr class="hr"></div>
             <div class="col-10 third_content">nested structure used in first and all row</div>
         </div>
-    </div> -->
+    </div>
 
     <script>
         function load() {
+            // document.getElementById("third").style.display = 'none';
+            // return;
+
             var outerColChildDiv
             var x = document.getElementById("third");
             var childNodes = x.childNodes;
