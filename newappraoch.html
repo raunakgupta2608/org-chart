@@ -49,7 +49,7 @@
                         <div class="col-12 bottom_middle standing_div"></div>
                       </div>
                     </div>
-                    <div class="col-10 second_level">Column</div>
+                    <div class="col-10 second_level" id="sec1">Column</div>
                 </div>
                 <div class="row row_padding">
                     <div class="col-2 p-0 m-0 standing_div">
@@ -58,7 +58,7 @@
                         <div class="col-12 bottom_middle"></div>
                       </div>
                     </div>
-                    <div class="col-10 second_level">Column</div>
+                    <div class="col-10 second_level" id="sec2">Column</div>
                 </div>
                 <div class="row row_padding">
                     <div class="col-2 p-0 m-0 standing_div">
@@ -67,7 +67,7 @@
                         <div class="col-12 bottom_middle"></div>
                       </div>
                     </div>
-                    <div class="col-10 second_level">Column</div>
+                    <div class="col-10 second_level" id="sec3">Column</div>
                 </div>
                 <div class="row row_padding">
                     <div class="col-2 p-0 m-0 standing_div">
@@ -76,7 +76,7 @@
                         <div class="col-12 bottom_middle"></div>
                       </div>
                     </div>
-                    <div class="col-10 second_level">Column</div>
+                    <div class="col-10 second_level" id="sec4">Column</div>
                 </div>
                 <div class="row row_padding">
                     <div class="col-2 p-0 m-0 standing_div">
@@ -85,7 +85,7 @@
                         <div class="col-12 bottom_middle"></div>
                       </div>
                     </div>
-                    <div class="col-10 second_level">Column</div>
+                    <div class="col-10 second_level" id="sec5">Column</div>
                 </div>
                 <div class="row row_padding">
                     <div class="col-2 p-0 m-0 standing_div">
@@ -94,7 +94,7 @@
                         <div class="col-12 bottom_middle"></div>
                       </div>
                     </div>
-                    <div class="col-10 second_level">Column</div>
+                    <div class="col-10 second_level" id="sec6">Column</div>
                 </div>
                 <div class="row row_padding">
                     <div class="col-2 p-0 m-0 standing_div">
@@ -103,7 +103,7 @@
                         <div class="col-12 bottom_middle"></div>
                       </div>
                     </div>
-                    <div class="col-10 second_level">Column</div>
+                    <div class="col-10 second_level" id="sec7">Column</div>
                 </div>
                 <div class="row row_padding">
                     <div class="col-2 p-0 m-0">
@@ -112,7 +112,7 @@
                         <div class="col-12 bottom_middle"></div>
                       </div>
                     </div>
-                    <div class="col-10 second_level">Column</div>
+                    <div class="col-10 second_level" id="sec8">Column</div>
                 </div>
             </div>
           </div>
@@ -307,33 +307,48 @@
     <script>
       
       function load() {
-        render();
-        console.log(document.getElementById('mid'));
+        var secId;
         var elements = document.getElementsByClassName('second_level');
 
-        function myFunction(e) {
-          console.log(e.clientX);
-          console.log(e.pageX);
-          document.getElementById('third_container').style.display = 'block';
-          // document.getElementById('mid').style.position = 'absolute';
-          // document.getElementById('mid').style.top = e.pageY;
-          // document.getElementById('mid').style.left = e.pageX;
-          // document.getElementById('third_container').style.position = 'absolute';
-          // document.getElementById('third_container').style.top = e.pageY+'px';
-          // document.getElementById('third_container').style.left = e.pageX+'px';
-        };
         for (var i = 0; i < elements.length; i++) {
-          elements[i].addEventListener('click', myFunction, false);
+          elements[i].addEventListener('click', (e) => {
+            secId = e.target.id;
+            document.getElementById('third_container').style.display = 'block';
+            render(secId);
+          });
         }
-        
+
+        // function myFunction(e) {
+        //   console.log(e.target);
+        //   console.log(e.clientX);
+        //   console.log(e.pageX);
+        //   document.getElementById('third_container').style.display = 'block';
+        //   // document.getElementById('mid').style.position = 'absolute';
+        //   // document.getElementById('mid').style.top = e.offsetY+'px';
+        //   // document.getElementById('mid').style.left = e.offsetX+'px';
+        //   // document.getElementById('third_container').style.position = 'absolute';
+        //   // document.getElementById('third_container').style.top = e.pageY+'px';
+        //   // document.getElementById('third_container').style.left = o+'px';
+        // };
+        // for (var i = 0; i < elements.length; i++) {
+        //   elements[i].addEventListener('click', myFunction, false);
+        // }
+
       }
 
-      function render() {
+      function render(secId) {
         var sleeping_line = document.querySelectorAll('.sleeping_line');
-        middle = (sleeping_line.length / 2);
-        var element = Math.floor(middle);
-        sleeping_line[element].style.borderBottom = "2px solid black";
-        sleeping_line[element].id = "mid";
+        for(let i=0; i<sleeping_line.length; i++) {
+          console.log(i);
+          sleeping_line[i].style.borderBottom = "0px solid black";
+        }
+        // middle = (sleeping_line.length / 2);
+        // var element = Math.floor(middle);
+        
+        var id = secId.charAt(3);
+        sleeping_line[+id +1].style.borderBottom = "2px solid black";
+        // sleeping_line[id].id = "mid";
+
       }
     </script>
 
