@@ -516,84 +516,9 @@
     </div>
 
 
-    <script>
-      
-      function load() {
-
-        var secId;
-        var elements = document.getElementsByClassName('second_level');
-
-        for (var i = 0; i < elements.length; i++) {
-          elements[i].addEventListener('click', (e) => {
-            secId = e.target.id;
-            document.getElementById('third_container').style.display = 'block';
-            render(secId);
-          });
-        }
-
-
-        //leftborder to individual rows
-        // var n = document.getElementById('second_container').children[0].getElementsByClassName('row_padding');
-        // for(let i=0;  i<n.length; i++){
-        //   if(i==0) {
-        //     console.log(n[i].children[0].children[0].children[0]);
-        //     n[i].children[0].children[0].children[0].style.borderLeft='2px solid white';
-        //   }
-        //   if(i!= (n.length - 1)){
-        //     n[i].classList.add('bottomMargin');
-        //     n[i].classList.add('borderLeft');
-        //   }
-        // }
-
-        // function myFunction(e) {
-        //   console.log(e.target);
-        //   console.log(e.clientX);
-        //   console.log(e.pageX);
-        //   document.getElementById('third_container').style.display = 'block';
-        //   // document.getElementById('mid').style.position = 'absolute';
-        //   // document.getElementById('mid').style.top = e.offsetY+'px';
-        //   // document.getElementById('mid').style.left = e.offsetX+'px';
-        //   // document.getElementById('third_container').style.position = 'absolute';
-        //   // document.getElementById('third_container').style.top = e.pageY+'px';
-        //   // document.getElementById('third_container').style.left = o+'px';
-        // };
-        // for (var i = 0; i < elements.length; i++) {
-        //   elements[i].addEventListener('click', myFunction, false);
-        // }
-
-      }
-
-      // function render(secId) {
-      //   var sleeping_line = document.querySelectorAll('.sleeping_line');
-      //   for(let i=0; i<sleeping_line.length; i++) {
-      //     sleeping_line[i].style.borderBottom = "0px solid black";
-      //   }
-        
-      //   var id = secId.charAt(3);
-      //   console.log(+id);
-      //   sleeping_line[+id+1].style.borderBottom = "2px solid black";
-
-      // }
-
-      function render(secId) {
-        var sleeping_line = document.querySelectorAll('.sleeping_line');
-        for(let i=0; i<sleeping_line.length; i++) {
-          sleeping_line[i].style.borderBottom = "0px solid black";
-        }
-        // middle = (sleeping_line.length / 2);
-        // var element = Math.floor(middle);
-        
-        var id = secId.charAt(3);
-        sleeping_line[+id].style.borderBottom = "2px solid black";
-        // sleeping_line[id].id = "mid";
-
-      }
-    </script>
-
-
     <!-- jQuery first, then BxSlider, then JS, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="third-level-view-mul.js"></script>
+    <script src="newapproach.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
