@@ -7,23 +7,24 @@ function load() {
         elements[i].addEventListener('click', (e) => {
         secId = e.target.id;
         document.getElementById('third_container').style.display = 'block';
-        render(secId);
+        render();
         });
     }
 }
 
 
 function render() {
-
     let sleeping_line = document.querySelectorAll('.sleeping_line');
     for(let i=0; i<sleeping_line.length; i++) {
         sleeping_line[i].style.borderBottom = "0px solid black";
     }
     document.getElementById(secId).nextElementSibling.firstElementChild.firstElementChild.style.borderBottom = '2px solid black';
+    renderData();
 }
 
 function renderData() {
-    var level = document.getElementsByClassName('level');
+    id = secId.charAt(3);
+    let level = document.getElementsByClassName('level');
     let selectedRow = (id - 1);
     for(let i=0; i<level.length; i++) {
         level[i].innerHTML = obj[selectedRow][i];
