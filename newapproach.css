@@ -11,6 +11,7 @@ html {
 
 #first_container {
     margin: 30% 0;
+    height: fit-content;
 }
 
 .root_node {
@@ -28,12 +29,28 @@ html {
 
 #second_container {
     margin: 20% 0;
+    height: fit-content;
+}
+
+.bottomMargin {
+    margin-bottom: 10%;
 }
 
 div#second_container div.second_level:hover {
     cursor: pointer;
 }
 
+/* div#second_container {
+    border-left: 2px solid black;
+} */
+
+.invisible_div {
+    height: 30px;
+}
+
+.borderLeft {
+    border-left: 2px solid black;
+}
 .standing_div {
     border-left: 2px solid black;
 }
