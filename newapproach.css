@@ -48,9 +48,6 @@ div#second_container div.second_level:hover {
     height: 30px;
 }
 
-.borderLeft {
-    border-left: 2px solid black;
-}
 .standing_div {
     border-left: 2px solid black;
 }

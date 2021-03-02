@@ -14,13 +14,12 @@ function load() {
 
 
 function render() {
-    var sleeping_line = document.querySelectorAll('.sleeping_line');
+
+    let sleeping_line = document.querySelectorAll('.sleeping_line');
     for(let i=0; i<sleeping_line.length; i++) {
         sleeping_line[i].style.borderBottom = "0px solid black";
     }
-    id = secId.charAt(3);
-    sleeping_line[+id].style.borderBottom = "2px solid black";
-    renderData();
+    document.getElementById(secId).nextElementSibling.firstElementChild.firstElementChild.style.borderBottom = '2px solid black';
 }
 
 function renderData() {
@@ -29,7 +28,6 @@ function renderData() {
     for(let i=0; i<level.length; i++) {
         level[i].innerHTML = obj[selectedRow][i];
     }
-    
 }
 
 var obj = [
